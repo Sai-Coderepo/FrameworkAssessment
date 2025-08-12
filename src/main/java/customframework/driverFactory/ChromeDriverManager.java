@@ -16,8 +16,6 @@ public class ChromeDriverManager implements BrowserDriver {
     @Override
     public WebDriver createDriver() {
 
-
-
        // WebDriverManager.chromedriver().setup();
         System.setProperty("webdriver.chrome.driver", driverPath);
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -27,8 +25,7 @@ public class ChromeDriverManager implements BrowserDriver {
         arguments.add("allow-running-insecure-content");
         chromeOptions.addArguments(arguments);
         ChromeDriver chromeDriver = new ChromeDriver(chromeOptions);
-        chromeDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(PropertyFileReader.getTestExecutionProperties("implicitWait"))
-        ));
+        chromeDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(PropertyFileReader.getTestExecutionProperties("implicitWait"))));
         return chromeDriver;
     }
 }

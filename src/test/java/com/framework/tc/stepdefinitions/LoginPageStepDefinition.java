@@ -3,6 +3,7 @@ package com.framework.tc.stepdefinitions;
 import com.framework.tc.pages.DashboardPage;
 import com.framework.tc.pages.LoginPage;
 import customframework.driverFactory.FrameworkDriverFactory;
+import customframework.drivermanager.DriverManager;
 import customframework.externaldatahandlers.PropertyFileReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -14,7 +15,7 @@ public class LoginPageStepDefinition {
     LoginPage loginPage;
     DashboardPage dashboardPage;
 
-    public WebDriver driver = FrameworkDriverFactory.getDriver(PropertyFileReader.getConfigProperties("browser")).createDriver();
+    public WebDriver driver = DriverManager.getDriver();
 
     public LoginPageStepDefinition() {
         loginPage = new LoginPage(driver);
