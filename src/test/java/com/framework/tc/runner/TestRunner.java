@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/java/com/framework/tc/features/OrangeHRM",
         glue={"com.framework.tc.stepdefinitions"},
-        tags="@SuccessfulloginFlow",
+        tags="@ErrorloginFlow",
         plugin={"pretty","html:test-output/ExecutionReport/AutomationReport.html"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
