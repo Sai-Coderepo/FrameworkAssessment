@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>Selenium Framework Assignment</name>
-    <description>Sample framework is created to automate Webapplications using selenium</description>
+    <description>Sample framework is created to automate Web applications using selenium</description>
     <url>https://demo.applitools.com/app.html</url>
 
     <properties>
@@ -56,11 +56,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-spring -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-plugin -->
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-spring</artifactId>
-            <version>7.26.0</version>
+            <artifactId>cucumber-plugin</artifactId>
+            <version>7.27.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
@@ -82,6 +82,12 @@
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>5.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>
