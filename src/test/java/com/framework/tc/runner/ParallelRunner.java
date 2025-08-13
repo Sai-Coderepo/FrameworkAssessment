@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
         features = "src/test/java/com/framework/tc/features/OrangeHRM",
         glue={"com.framework.tc.stepdefinitions","com.framework.tc.hooks"},
         tags="@ErrorloginFlow or @SuccessfulloginFlow",
-        plugin={"pretty","html:test-output/ExecutionReport/AutomationReport.html"}
+        plugin={"pretty","html:test-output/ExecutionReport/AutomationReport.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 public class ParallelRunner extends AbstractTestNGCucumberTests {
     @Override

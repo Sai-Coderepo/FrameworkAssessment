@@ -1,7 +1,5 @@
 <suite name="Cucumber Suite" parallel="classes" thread-count="2">
     <test name="Parallel Execution Demo">
-        <parameter name = "browser" value = "firefox"></parameter>
-        <parameter name = "browser" value = "chrome"></parameter>
         <classes>
             <class name="com.framework.tc.runner.ParallelRunner"/>
         </classes>

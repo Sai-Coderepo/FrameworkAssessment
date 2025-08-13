@@ -1,18 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Demo test suite" parallel="methods" thread-count="3">
-
-
-<!--    <listeners>-->
-<!--        <listener class-name="listeners.TestListener" ></listener>-->
-<!--    </listeners>-->
-
-    <!-- Browser takes two values 'edge' and 'chrome'-->
-    <parameter name = "browser" value = "edge"></parameter>
-    <test name="Navigate to home page" thread-count="3">
+<suite name="Demo Runner" >
+    <test name="Test Execution Demo">
         <classes>
-            <class name="Tests.NewUserRegistration"/>
+            <class name="com.framework.tc.runner.TestRunner"/>
         </classes>
     </test>
-
 </suite>

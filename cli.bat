@@ -1,0 +1,1 @@
+mvn test -DsuiteFile=testNg_Runner.xml
