@@ -4,6 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import customframework.engine.FrameworkReporter;
+import org.openqa.selenium.WebDriver;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +18,7 @@ public class RunConfiguration {
     public FrameworkReporter frameworkReporter = null;
     public Map<String, String> mapExecutionProperties = null;
     public Map<String, String> bufferValues = null;
+    public WebDriver frameworkDriver = null;
 
     private RunConfiguration() {
         frameworkReporter = new FrameworkReporter();

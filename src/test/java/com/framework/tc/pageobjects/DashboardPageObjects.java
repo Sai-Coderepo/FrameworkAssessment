@@ -14,7 +14,7 @@ public class DashboardPageObjects {
     @FindBy(xpath="//button[@type='button' and @role='none']/i[@class='oxd-icon bi-chevron-left']")
     public WebElement menuExpand_button;
 
-    @FindBy(xpath="//button[@type='button' and @role='none']/i[@class='oxd-icon bi-chevron-left']")
+    @FindBy(xpath="//span[@class='oxd-userdropdown-tab']")
     public WebElement profile_dropdown;
 
     @FindBy(linkText="Logout")
