@@ -1,11 +1,10 @@
 package customframework.engine;
 
 import customframework.driverFactory.FrameworkDriverFactory;
+import customframework.drivermanager.DriverManager;
 import customframework.externaldatahandlers.PropertyFileReader;
 import customframework.runConfigurations.RunConfiguration;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Parameters;
@@ -45,5 +44,9 @@ public class UtilityFunctions {
 
         }
         return driver;
+    }
+
+    public static byte[] takeScreenShot() {
+        return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
     }
 }

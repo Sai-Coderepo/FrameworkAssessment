@@ -5,7 +5,9 @@ import customframework.engine.UtilityFunctions;
 import customframework.runConfigurations.RunConfiguration;
 import io.cucumber.java.After;
 
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -29,6 +31,17 @@ public class Hooks {
             DriverManager.removeDriver();
         } catch (Exception e) {
 
-        }
+        }}
+
+
+        @AfterStep
+        public void afterStep(Scenario scenario) {
+            try {
+                scenario.attach(UtilityFunctions.takeScreenShot(), "image/png", scenario.getName());
+            } catch (Exception e) {
+
+            }
+
+
     }
 }
